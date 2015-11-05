@@ -27,7 +27,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Using Dido is very simple. Once you have it installed you can create your library project with:
+
+```bash
+dido lib MyLib --org-id=io.gitdo --org-name=GitDo
+```
+
+The tool will create your project under `./MyLib`, open the `.xcodeproj` inside and start coding.
+
+**I don't need tvOS/OSX/watchOS/iOS targets** 
+Then you can remove them from the project. Remove the **target** and the **scheme** and voila! :tada:
 
 ## Development
 
