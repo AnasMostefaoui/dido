@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'Dido/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "Dido"
+  spec.name          = "dido"
   spec.version       = Dido::VERSION
   spec.authors       = ["Pedro Piñera"]
   spec.email         = ["pedro@gitdo.com"]
@@ -16,7 +16,8 @@ Gem::Specification.new do |spec|
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  # spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  spec.executables = ['dido']
   spec.require_paths = ["lib"]
 
   spec.add_dependency "thor", "0.19.1"

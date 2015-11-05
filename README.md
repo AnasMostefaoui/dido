@@ -38,6 +38,13 @@ The tool will create your project under `./MyLib`, open the `.xcodeproj` inside 
 **I don't need tvOS/OSX/watchOS/iOS targets** 
 Then you can remove them from the project. Remove the **target** and the **scheme** and voila! :tada:
 
+## Thanks
+
+- Special thanks to [CocoaPods](https://cocoapods.org) for its `pod lib create` tool which we inspired from.
+- Also special thanks to [Carthage](https://github.com/carthage/carthage) also for its dependency management solution.
+
+We encourage supporting both dependency management solutions in your libraries. Give developers the option to choose between them.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
