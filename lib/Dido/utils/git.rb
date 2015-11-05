@@ -10,7 +10,7 @@ module Dido
       private
 
       def clone(url, name)
-        FileUtils.remove_dir(name)
+        FileUtils.remove_dir(name) if File.exist?(name)
         puts `git clone #{url} #{name}`
       end
 
