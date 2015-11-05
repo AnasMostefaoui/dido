@@ -38,6 +38,8 @@ The tool will create your project under `./MyLib`, open the `.xcodeproj` inside 
 **I don't need tvOS/OSX/watchOS/iOS targets** 
 Then you can remove them from the project. Remove the **target** and the **scheme** and voila! :tada:
 
+![image](assets/screenshot.png)
+
 ## Thanks
 
 - Special thanks to [CocoaPods](https://cocoapods.org) for its `pod lib create` tool which we inspired from.
