@@ -14,7 +14,7 @@ Every time you start working on a new library you have to setup the project, cre
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'Dido'
+gem 'dido'
 ```
 
 And then execute:
@@ -23,7 +23,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Dido
+    $ gem install dido
 
 ## Usage
 
