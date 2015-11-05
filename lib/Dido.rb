@@ -12,9 +12,10 @@ module Dido
 	class App < Thor
 
 		desc "lib LIB_NAME", "create a lib with the provided name"
-    option :organization, :type => :string, :required => true
+    option :org_id, :type => :string, :required => true, :desc => "Framework organization identifier (e.g. io.GitDo)"
+    option :org_name, :type => :string, :required => true, :desc => "Framework organization name (e.g. GitDo)"
 	  def lib(name)
-      config = Entities::Config.new(name, options[:organization])
+      config = Entities::Config.new(name, options[:org_id], options[:org_name])
       clone_template(config)
       update_template(config)
       update_dependencies(config)
@@ -42,7 +43,7 @@ module Dido
 
     def update_dependencies(config)
       puts "> Updating Carthage dependencies...".colorize(:green)
-      carthage = Utils::Carthage.new("./#{config.name}")
+      carthage = Utils::Carthage.new("./#{config.name}", config)
       carthage.update
     end
 

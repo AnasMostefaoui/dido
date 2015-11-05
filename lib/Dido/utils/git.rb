@@ -10,6 +10,7 @@ module Dido
       private
 
       def clone(url, name)
+        FileUtils.remove_dir(name)
         puts `git clone #{url} #{name}`
       end
 

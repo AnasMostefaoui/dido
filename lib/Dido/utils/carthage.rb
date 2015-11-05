@@ -3,12 +3,13 @@ module Dido
 
     class Carthage
 
-      def initialize(path)
+      def initialize(path, config)
         @path = path
+        @config = config
       end
 
       def update
-        #TODO
+        puts `carthage update ./#{@config.name}`
       end
 
     end
