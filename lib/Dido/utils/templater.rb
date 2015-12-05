@@ -11,11 +11,19 @@ module Dido
       end
 
       def adapt(path)
+        remove_git(path)
         rename_directories(path)
         rename_files(path)
       end
 
       private
+
+      def remove_git(path)
+        git_dir = File.join("path", ".git")
+        git_modules_file = File.join("path", ".gitmodules")
+        File.delete(git_dir) if File.exist?(git_dir)
+        File.delete(git_modules_file) if File.exist?(git_modules_file)
+      end
 
       def rename_directories(path)
         rename = lambda { |path|
